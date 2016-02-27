@@ -1,0 +1,5 @@
+node_modules/
+.sass-cache/
+.vagrant/
+bower_components/
+Vagrantfile.*

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skeleton Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body data-ng-app="app">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
+                        <a class="navbar-brand" href="/">
+                            <span class="fa fa-home fa-fw fa-2x" aria-hidden="true"></span>
+                            Skeleton Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Aside Menu -->
+            <aside class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+               <uib-tabset active="activePill" vertical="true" type="pills">
+                    <uib-tab index="0" heading="Printed Door Report"></uib-tab>
+                </uib-tabset>
+            </aside>
+            <!-- Main Content -->
+            <article ui-view class="col-xs-12 col-sm-12 col-md-9 col-lg-9"></article>
+        </div>
+    </div>
+    <script src="/js/default.js"></script>
+</body>
+</html>
