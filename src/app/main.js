@@ -52,11 +52,13 @@
         $rootScope.tabSelect = function(id){
             $rootScope.currentTab = id;
         };
-        //
+        //controll panel adjustment
         $rootScope.wideScreen = false;
+        //enable fullscreen
         $rootScope.enableWideScreen = function(){
             $rootScope.wideScreen = true;
         };
+        //disable fullscreen
         $rootScope.disableWideScreen = function(){
             $rootScope.wideScreen = false;
         };

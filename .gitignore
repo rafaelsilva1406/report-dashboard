@@ -2,4 +2,9 @@ node_modules/
 .sass-cache/
 .vagrant/
 bower_components/
+.cache/
+.config/
+.npm/
+.bash_history
+..v8flags.4.6.85.31.vagrant.*
 Vagrantfile.*
