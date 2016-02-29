@@ -13,27 +13,33 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
-                        <a class="navbar-brand" href="/">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <a class="navbar-brand col-md-12 col-lg-12" href="/">
                             <span class="fa fa-home fa-fw fa-2x" aria-hidden="true"></span>
                             Skeleton Dashboard
                         </a>
+                    </div>
+                    <div ng-class="{'col-xs-12 col-sm-12 col-md-6 col-lg-6 show': wideScreen==true, 'hidden':wideScreen==false}">
+                        <div class="btn-group  pull-left" role="group" aria-label="Panel Tools">
+                            <button type="button" class="btn btn-default" data-ng-click="disableWideScreen()"><span class="fa fa-times-circle-o" aria-hidden="true"></span></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Aside Menu -->
-            <aside class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-               <uib-tabset active="activePill" vertical="true" type="pills">
-                    <uib-tab index="0" heading="Printed Door Report"></uib-tab>
-                </uib-tabset>
-            </aside>
-            <!-- Main Content -->
-            <article ui-view class="col-xs-12 col-sm-12 col-md-9 col-lg-9"></article>
-        </div>
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <!-- Aside Menu -->
+        <aside class="menu-tabs" ng-class="{'hidden': wideScreen==true, 'show-table-cell': wideScreen==false}">
+                <ul class="list-group">
+                     <button type="button" class="list-group-item" ng-class="{'active': currentTab==0}" data-ng-click="tabSelect(0)">Page 1</button>
+                     <button type="button" class="list-group-item" ng-class="{'active': currentTab==1}" data-ng-click="tabSelect(1)">Page 2</button>
+                     <button type="button" class="list-group-item" ng-class="{'active': currentTab==2}" data-ng-click="tabSelect(2)">Page 3</button>
+                </ul>
+        </aside>
+        <!-- Main Content -->
+        <article ui-view class="wrap-panels"></article>
     </div>
     <script src="/js/default.js"></script>
 </body>

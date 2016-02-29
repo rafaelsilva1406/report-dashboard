@@ -1,1 +1,38 @@
-<h1>{{message}}</h1>
+<section class="content-panel" data-ng-class="{'wideScreen': wideScreen==true}">
+    <div ng-show="currentTab == 0">
+        <div class="panel panel-default">
+            <div class="panel-heading">Panel heading without title 1  
+                <div class="btn-group  pull-right" role="group" aria-label="Panel Tools">
+                    <button type="button" class="btn btn-default" data-ng-class="{'hidden': wideScreen==true, 'show': wideScreen==false}" data-ng-click="enableWideScreen()"><span class="fa fa-arrows-alt" aria-hidden="true"></span></button>
+                </div>
+             </div>
+            <div class="panel-body">
+                 <h4>Tab 1</h4>
+            </div>
+        </div>
+    </div>
+    <div ng-show="currentTab == 1">
+        <div class="panel panel-default">
+            <div class="panel-heading">Panel heading without title 2
+                <div class="btn-group  pull-right" role="group" aria-label="Panel Tools">
+                    <button type="button" class="btn btn-default" data-ng-class="{'hidden': wideScreen==true, 'show': wideScreen==false}" data-ng-click="enableWideScreen()"><span class="fa fa-arrows-alt" aria-hidden="true"></span></button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <h4>Tab 2</h4>
+            </div>
+        </div>
+    </div>
+    <div ng-show="currentTab == 2">
+        <div class="panel panel-default">
+            <div class="panel-heading">Panel heading without title 3
+                <div class="btn-group  pull-right" role="group" aria-label="Panel Tools">
+                    <button type="button" class="btn btn-default" data-ng-class="{'hidden': wideScreen==true, 'show': wideScreen==false}" data-ng-click="enableWideScreen()"><span class="fa fa-arrows-alt" aria-hidden="true"></span></button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <h4>Tab 3</h4>
+            </div>
+        </div>
+    </div>
+</section>

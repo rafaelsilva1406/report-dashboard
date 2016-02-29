@@ -10,16 +10,16 @@
     }
  }(this, function(angular){
     'use strict';
-    //libs
+    //Community modules
     require('angular-translate');
     require('angular-translate-loader-partial');
     require('angular-ui-bootstrap');
     require('ng-storage');
     
-    //custom
+    //API modules
     require('./core/modules/showerrors/module');
     
-    //include module
+    //UI modules
     require('./dashboard/module');
     require('./login/module');
     
@@ -28,6 +28,38 @@
     //setup routes
     app.config(function($stateProvider,$urlRouterProvider){
         $urlRouterProvider.otherwise('/');
+    });
+    //globals 
+    app.run(function($rootScope){
+        //setup list menu tabs
+        $rootScope.tabs = [
+            {
+                id:0,
+                title:'Page 1',
+            },
+            {
+                id:1,
+                title:'Page 2',
+            },
+            {
+                id:2,
+                title:'Page 3',
+            }
+        ];
+        //setup default active
+        $rootScope.currentTab = 0;
+        //create update method
+        $rootScope.tabSelect = function(id){
+            $rootScope.currentTab = id;
+        };
+        //
+        $rootScope.wideScreen = false;
+        $rootScope.enableWideScreen = function(){
+            $rootScope.wideScreen = true;
+        };
+        $rootScope.disableWideScreen = function(){
+            $rootScope.wideScreen = false;
+        };
     });
  }));
  

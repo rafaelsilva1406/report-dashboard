@@ -28,5 +28,5 @@
     //invoke service
     dashboard.service('ReportService',['$localStorage','$http','$q',require('./Services/ReportService')]);
     //invoke controller
-    dashboard.controller('DashboardController',['$scope',require('./Controllers/IndexController')]);
+    dashboard.controller('DashboardController',require('./Controllers/IndexController'));
 }));
