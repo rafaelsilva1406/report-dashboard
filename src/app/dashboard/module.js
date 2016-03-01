@@ -26,7 +26,7 @@
         });
     });
     //invoke service
-    dashboard.service('ReportService',['$localStorage','$http','$q',require('./Services/ReportService')]);
+    dashboard.service('ReportService',require('./Services/ReportService'));
     //invoke controller
     dashboard.controller('DashboardController',require('./Controllers/IndexController'));
 }));

@@ -15,6 +15,7 @@
     require('angular-translate-loader-partial');
     require('angular-ui-bootstrap');
     require('ng-storage');
+    require('angular-touch');
     
     //API modules
     require('./core/modules/showerrors/module');
@@ -24,10 +25,14 @@
     require('./login/module');
     
     //create module instance
-    var app = angular.module('app', [require('angular-ui-router'),require('angular-sanitize'),'ui.bootstrap','ui.bootstrap.showErrors','dashboard','login']);
+    var app = angular.module('app', [require('angular-ui-router'),require('angular-sanitize'),'ngTouch','ui.bootstrap','ui.bootstrap.showErrors','dashboard','login']);
     //setup routes
-    app.config(function($stateProvider,$urlRouterProvider){
+    app.config(function($stateProvider,$urlRouterProvider,$httpProvider){
         $urlRouterProvider.otherwise('/');
+        
+        //CORS Fix
+         delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
     });
     //globals 
     app.run(function($rootScope){

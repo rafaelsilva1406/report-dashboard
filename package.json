@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/rafaelsilva1406/skeletondashboard#readme",
   "devDependencies": {
+    "angular-carousel": "^1.0.1",
     "angular-sanitize": "^1.5.0",
+    "angular-touch": "^1.5.0",
     "angular-translate": "^2.9.0",
     "angular-translate-loader-partial": "^2.9.0",
     "angular-ui-bootstrap": "^1.2.0",
