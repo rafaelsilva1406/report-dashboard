@@ -1,25 +1,38 @@
-@import "bootstrap";
-@import "font-awesome";
 /*
 * Global vars
 */
-$someColor: red;
+$brand-primary: #a0ce4e;
+
+@import "bootstrap";
+@import "font-awesome";
 
 /*
 * Override Bootstrap Defaults
 */
+.navbar-default {
+    border-bottom-color: $brand-primary;
+    border-style: solid;
+    border-width: 4px;
+}
 .navbar{
     margin-bottom: 0px;
 }
 .navbar-header{
     float: none;
 }
-
+.carousel{
+    background:#222;
+    background: radial-gradient(circle, white, #ddd, #222); 
+}
+.carousel-caption{
+    color:#222;
+}
 /*
 * App Styles
 */
-h1{
-    color: $someColor;
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .dashboard{
     display: table;

@@ -2,12 +2,23 @@
     <div ng-show="currentTab == 0">
         <div class="panel panel-default">
             <div class="panel-heading">Panel heading without title 1  
-                <div class="btn-group  pull-right" role="group" aria-label="Panel Tools">
-                    <button type="button" class="btn btn-default" data-ng-class="{'hidden': wideScreen==true, 'show': wideScreen==false}" data-ng-click="enableWideScreen()"><span class="fa fa-arrows-alt" aria-hidden="true"></span></button>
+                <div class="btn-group  pull-right" role="group" aria-label="Panel Tools" uib-dropdown data-ng-class="{'hidden': wideScreen==true, 'show': wideScreen==false}">
+                    <button id="split-button" type="button" class="btn btn-default"><span class="fa fa-cogs" aria-hidden="true"></span></button>
+                    <button type="button" class="btn btn-default" uib-dropdown-toggle>
+                        <span class="fa fa-caret-down"></span>
+                        <span class="sr-only">Split button!</span>
+                    </button>
+                    <ul uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                        <li role="menuitem"><button type="button" class="btn btn-default btn-lg btn-block"  data-ng-click="enableWideScreen()"><span class="fa fa-arrows-alt" aria-hidden="true"></span> Fullscreen</button></li>
+                    </ul>
                 </div>
              </div>
             <div class="panel-body">
-                
+                <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" no-pause="noPause">
+                    <uib-slide ng-repeat="slide in slides" index="slide.id">
+                        <img ng-src="{{slide.src}}" style="margin:auto;" alt="{{slide.text}}">
+                    </uib-slide>
+                </uib-carousel>
             </div>
         </div>
     </div>

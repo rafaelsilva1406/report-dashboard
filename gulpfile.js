@@ -47,7 +47,11 @@ gulp.task('scss', function() {
 });
 //Font Tasks
 gulp.task('fonts', function(){
-    return gulp.src(config.fontAwesome+'/fonts/**.*')
+    var fontsMultiple = [
+        config.fontAwesome+'/fonts/**.*',
+        config.bootstrapDir+'/assets/fonts/**/**.*'
+    ];
+    return gulp.src(fontsMultiple)
     .pipe(gulp.dest(config.publicDir+'/fonts'));
 });
 //Js Tasks

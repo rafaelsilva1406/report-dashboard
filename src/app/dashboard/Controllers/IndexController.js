@@ -1,5 +1,9 @@
 module.exports = ['$rootScope','$scope','ReportService',function($rootScope,$scope,ReportService){
     var base = '/';
+    $scope.myInterval = 2500;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    $scope.noPause = false;
     $scope.slides = [
         {
             id:0,
