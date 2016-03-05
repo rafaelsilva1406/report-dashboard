@@ -2,30 +2,62 @@
 * Global vars
 */
 $brand-primary: #a0ce4e;
+$brand-dark: #506029;
+$silver-zinc: #ccc;
+$medium-grey: #363434;
+$dark-grey:#222;
+$light-grey:#ddd;
+$tint-grey:#777;
 
+/*
+* Pre Override Boostrap Vars
+*/
+//==Navbar
+$navbar-default-color: $silver-zinc;
+$navbar-default-brand-color: $silver-zinc;
+ $navbar-default-brand-hover-color: #fff;
+$navbar-default-bg: $medium-grey;
+$navbar-default-border: $medium-grey;
+$navbar-margin-bottom: 0px;
+$navbar-border-radius: 0px;
+//==Panel
+$panel-bg:transparent;
+$panel-border-radius: 0px;
+$panel-default-border: $dark-grey;
+$panel-default-text: #fff;
+$panel-default-border: transparent;
+$panel-default-heading-bg: $brand-primary;
+//==List group
+$list-group-active-bg: $brand-primary;
+$list-group-active-border: $brand-primary;
+$list-group-bg: $medium-grey;
+$list-group-border: $medium-grey;
+$list-group-hover-bg: $dark-grey;
+$list-group-active-color: #fff;
+//==Carousel
+$carousel-caption-color: $dark-grey;
+//==buttons
+$btn-default-color: $silver-zinc;
+$btn-default-bg: $medium-grey;
+$btn-default-border: $medium-grey;
+//==Dropdowns
+$dropdown-bg: $dark-grey;
+$dropdown-border: $dark-grey;
 @import "bootstrap";
 @import "font-awesome";
 
 /*
 * Override Bootstrap Defaults
 */
-.navbar-default {
-    border-bottom-color: $brand-primary;
-    border-style: solid;
-    border-width: 4px;
-}
-.navbar{
-    margin-bottom: 0px;
-}
 .navbar-header{
     float: none;
 }
 .carousel{
-    background:#222;
-    background: radial-gradient(circle, white, #ddd, #222); 
+    background: $dark-grey;
+    background: radial-gradient(circle, white, $light-grey, $dark-grey); 
 }
-.carousel-caption{
-    color:#222;
+.panel-body{
+    background-color: $medium-grey;
 }
 /*
 * App Styles
@@ -33,6 +65,7 @@ $brand-primary: #a0ce4e;
 body{
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: $dark-grey;
 }
 .dashboard{
     display: table;
@@ -40,7 +73,7 @@ body{
     height:100%;   
 }
 .menu-tabs{
-    background-color:#e7e7e7;
+    background-color:$medium-grey;
     float: none;
     display: table-cell;
     width:10%;
@@ -48,14 +81,30 @@ body{
     padding-bottom:9999px;
     margin-bottom:-9999px;
 }
+.menu-tabs > .list-group{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .menu-tabs > .list-group > .list-group-item{
     display:inline;
+    color: $silver-zinc;
+}
+.menu-tabs > .list-group > .list-group-item:hover{
+    color:#fff;
+}
+.menu-tabs > .list-group > .list-group-item.active{
+    color:#fff;
 }
 .wrap-panels{
     float: none;
     display: table-cell;
     height:100%;
     width:100%;
+}
+.panel-default > .panel-heading{
+    background: linear-gradient($brand-primary, $brand-dark);
+    border-bottom: 0px solid transparent;
 }
 .content-panel{
     margin-right: auto;
