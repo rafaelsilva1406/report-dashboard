@@ -66,6 +66,11 @@
         $rootScope.disableWideScreen = function(){
             $rootScope.wideScreen = false;
         };
+        $rootScope.collapseMenu = [
+            {
+                report:true
+            }
+        ];
     });
  }));
  

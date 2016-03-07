@@ -4,7 +4,7 @@
 $brand-primary: #a0ce4e;
 $brand-dark: #506029;
 $silver-zinc: #ccc;
-$medium-grey: #363434;
+$medium-grey: #444242;
 $dark-grey:#222;
 $light-grey:#ddd;
 $tint-grey:#777;
@@ -15,7 +15,7 @@ $tint-grey:#777;
 //==Navbar
 $navbar-default-color: $silver-zinc;
 $navbar-default-brand-color: $silver-zinc;
- $navbar-default-brand-hover-color: #fff;
+$navbar-default-brand-hover-color: #fff;
 $navbar-default-bg: $medium-grey;
 $navbar-default-border: $medium-grey;
 $navbar-margin-bottom: 0px;
@@ -96,6 +96,13 @@ body{
 .menu-tabs > .list-group > .list-group-item.active{
     color:#fff;
 }
+.sub-menu > .list-group-item{
+    background-color: $dark-grey;
+}
+.sub-menu > .list-group-item:hover{
+    color:#fff;
+    opacity: 0.7;
+}
 .wrap-panels{
     float: none;
     display: table-cell;
@@ -105,6 +112,9 @@ body{
 .panel-default > .panel-heading{
     background: linear-gradient($brand-primary, $brand-dark);
     border-bottom: 0px solid transparent;
+}
+.panel-body{
+    color:$silver-zinc;
 }
 .content-panel{
     margin-right: auto;
