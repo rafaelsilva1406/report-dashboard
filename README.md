@@ -1,2 +1,2 @@
 # report-dashboard
-This will display aside left bar with panels in the middle.
+UI startup template which displays left side bar with panels in the middle.
